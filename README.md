@@ -1,2 +1,2 @@
 # milkinabag
-Repo for neocities site.
+Repository for the milkinabag neocities website.

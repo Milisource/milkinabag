@@ -1,0 +1,49 @@
+/* Import MIBOM fonts */
+@font-face {
+  font-family: "122";
+  src: url("Resources/Fonts/122.woff2") format("woff2"),
+    url("Resources/Fonts/122.woff") format("woff"),
+    url("Resources/Fonts/122.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "aaa";
+  src: url("Resources/Fonts/aaa.woff2") format("woff2"),
+    url("Resources/Fonts/aaa.woff") format("woff"),
+    url("Resources/Fonts/aaa.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "MyCustomFont", sans-serif;
+}
+
+html {
+  cursor: url("Resources/curs.png"), default;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+.background-animation {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: 0 0;
+  animation: moveBackground 8s ease-in-out infinite alternate;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -45px -45px;
+  }
+}
