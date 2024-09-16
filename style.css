@@ -18,7 +18,7 @@
 }
 
 body {
-  font-family: "MyCustomFont", sans-serif;
+  font-family: "aaa", sans-serif;
 }
 
 html {
@@ -28,6 +28,7 @@ html {
 body {
   margin: 0;
   height: 100vh;
+  width: 100vw;
   overflow: hidden;
 }
 .background-animation {
@@ -37,6 +38,7 @@ body {
   background-size: cover;
   background-position: 0 0;
   animation: moveBackground 8s ease-in-out infinite alternate;
+  z-index: 1;
 }
 
 @keyframes moveBackground {
