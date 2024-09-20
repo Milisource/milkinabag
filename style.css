@@ -30,6 +30,12 @@ html {
   font-size: 23px;
 }
 
+.dialogue{
+  position: fixed;
+  color: #ae3337;
+  font-size: 24px;
+}
+
 body {
   margin: 0;
   height: 100vh;
