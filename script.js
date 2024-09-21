@@ -14,26 +14,19 @@ const backgrounds = [
 const randomIndex = Math.floor(Math.random() * backgrounds.length);
 
 // Apply the randomly selected background
-document.getElementById(
-  "background"
-).style.backgroundImage = `url('${backgrounds[randomIndex]}')`;
+document.getElementById("background").style.backgroundImage = `url('${backgrounds[randomIndex]}')`;
 
-document.addEventListener("DOMContentLoaded", function() {
-  const musicToggle = document.getElementById("musicToggle");
-  const musicText = document.getElementById("musicText");
-  const backgroundMusic = document.getElementById("backgroundMusic");
+        const toggleButton = document.getElementById('toggleButton');
+        const backgroundMusic = document.getElementById('backgroundMusic');
+        let isPlaying = false;
 
-  // Initial state: music is playing because autoplay is on
-  let isPlaying = true;
-
-  musicToggle.addEventListener("click", function() {
-    if (isPlaying) {
-      backgroundMusic.pause();
-      musicText.textContent = "Play Music"; // Change the text inside the <p> tag
-    } else {
-      backgroundMusic.play();
-      musicText.textContent = "Stop Music"; // Change the text inside the <p> tag
-    }
-    isPlaying = !isPlaying; // Toggle the state
-  });
-});
+        toggleButton.addEventListener('click', () => {
+            if (isPlaying) {
+                backgroundMusic.pause();
+                toggleButton.textContent = 'Play Music';
+            } else {
+                backgroundMusic.play();
+                toggleButton.textContent = 'Pause Music';
+            }
+            isPlaying = !isPlaying;
+        });
