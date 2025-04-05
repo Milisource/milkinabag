@@ -227,10 +227,23 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.8);
-  color: white;
   padding: 20px;
   border-radius: 10px;
   display: none;
+}
+
+/*
+Text, but in details.
+
+Do we really need this? Probably not. Am I smart enough to figure out how to make it work with the base details class? No.
+*/
+.details-text {
+  color: #ae3337;
+  font-size: 1.2vw;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  white-space: pre-line;
 }
 
 #toggleButton {
