@@ -1,14 +1,5 @@
 // Array of background image paths
-const backgrounds = [
-  "Resources/Backgrounds/20.png",
-  "Resources/Backgrounds/60.png",
-  "Resources/Backgrounds/24.png",
-  "Resources/Backgrounds/39.png",
-  "Resources/Backgrounds/36.png",
-  "Resources/Backgrounds/52.png",
-  "Resources/Backgrounds/68.png",
-  "Resources/Backgrounds/81.png",
-];
+const backgrounds = Array.from({ length: 85 }, (_, i) => `Resources/Backgrounds/${i + 1}.png`);
 
 // Generate a random number based on the length of the backgrounds array
 const randomIndex = Math.floor(Math.random() * backgrounds.length);

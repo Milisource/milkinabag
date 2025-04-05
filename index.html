@@ -6,15 +6,28 @@
     <title>Help Me Buy Milk!</title>
     <link href="/style.css" rel="stylesheet" type="text/css" media="all" />
   </head>
-  <body style="background: black">
+  <body>
     <div class="retro">
-      <h1 class="warntxt blink" style="text-align: center;">Beware!<br>Site is non-functional!</h1>
-      <img src="Resources/Sprite/neutral_1.png" height="80%" style="position: fixed; bottom: 0vh; left: 2vw">
-      <img src="Resources/Buttons/textbox.png" height="31%" style="position: fixed; bottom: 1vh; right: 20.3vw;">
-      <p class="dialogue" style="bottom: 16vh; right: 25%;">> Be careful here! There's not really any support for<br>anything other than Mozilla Firefox on a 1920x926<br>viewport. That's fine, right?</p>
-      <p class="dialogue" style="bottom: 4vw; left: 33.8vw; "><a href="home.html">--> Heck yeah!</a></p>
-      <p class="dialogue" style="bottom: 2vw; left: 33.8vw;; "><a href="https://neocities.org/site/milkinabag">--> Heck no!</a></p>
-      <p class="dialogue" style="bottom: 1.3vw; right: 22vw; font-size: small;">Psss. If something is horribly broken,<br>you should <a href="https://linktr.ee/ilikemotorcycles">let me know!</a></p>
+      <h1 class="warntxt blink">Beware!<br>Site is non-functional!</h1>
+      
+      <!-- the creature -->
+      <div class="character-container">
+        <img src="Resources/Sprite/neutral_1.png" alt="Character">
+      </div>
+      
+      <div class="textbox-container">
+        <img src="Resources/Buttons/textbox.png" alt="Textbox">
+      </div>
+      
+      <!-- Ideally, this won't need to be here and the site will just be reactive, but who knows? I refuse to use a library for this little side-project, fuck React. -->
+      <p class="dialogue dialogue-main">> Be careful here! There's not really any support for anything other than Mozilla Firefox on a 1920x926 viewport. That's fine, right?</p>
+      
+      <div class="dialogue-options">
+        <p class="dialogue"><a href="home.html">--> Heck yeah!</a></p>
+        <p class="dialogue"><a href="https://neocities.org/site/milkinabag">--> Heck no!</a></p>
+      </div>
+      
+      <p class="dialogue dialogue-footer">Psss. If something is horribly broken,<br>you should <a href="https://linktr.ee/ilikemotorcycles">let me know!</a></p>
     </div>
   </body>
 </html>

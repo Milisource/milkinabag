@@ -19,28 +19,153 @@
 
 .retro {
   font-family: "122", sans-serif;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 }
 
-html {
+/* Set custom cursor, background, and overflow */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
   cursor: url("Resources/curs.png"), default;
 }
 
-.warntxt{
-  color: #ae3337;
-  font-size: 23px;
-}
-
-.dialogue{
-  position: fixed;
-  color: #ae3337;
-  font-size: 1.25vw;
-}
-
+/* Set background to black */
 body {
+  background: black;
+}
+
+.warntxt {
+  color: #ae3337;
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
+  margin-bottom: 2rem;
+  z-index: 2;
+}
+
+.dialogue {
+  color: #ae3337;
+  font-size: clamp(0.8rem, 1.25vw, 1.5rem);
+  position: absolute;
+  max-width: 90%;
+}
+
+.character-container {
+  position: absolute;
+  bottom: 0;
+  left: 2%;
+  height: 80%;
+  display: flex;
+  align-items: flex-end;
+  z-index: 1;
+}
+
+.character-container img {
+  height: 80vh;
+  width: auto;
+  object-fit: contain;
+}
+
+.textbox-container {
+  position: fixed;
+  bottom: 1vh;
+  right: 20vw;
+  width: auto;
+  height: 31vh;
+  z-index: 2;
+}
+
+.textbox-container img {
+  height: 100%;
+  width: auto;
+}
+
+.dialogue-main {
+  position: fixed;
+  bottom: 15vh;
+  right: 27.4%;
+  max-width: 40vw;
+  text-align: left;
+  font-size: 1.2vw;
+  line-height: 1.5;
+  z-index: 3;
+}
+
+.dialogue-options {
+  position: fixed;
+  bottom: 3vh;
+  left: 33.8vw;
+  max-width: 40vw;
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  font-size: 1.2vw;
+}
+
+.dialogue-options p.dialogue {
   margin: 0;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 90%;
+  line-height: 1;
+  display: block;
+}
+
+/* let it hang sis!!!! */
+.dialogue-options p.dialogue a {
+  text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
+  margin-bottom: 2vh;
+}
+
+.dialogue-footer {
+  position: fixed;
+  bottom: 1.3vh;
+  right: 22vw;
+  font-size: 0.8vw;
+  text-align: right;
+  z-index: 3;
+}
+
+@media screen and (max-width: 768px) {
+  .character-container img {
+    height: 60vh;
+  }
+  
+  .textbox-container {
+    right: 10vw;
+    height: 25vh;
+  }
+  
+  .dialogue-main {
+    bottom: 14vh;
+    right: 15%;
+    max-width: 60vw;
+    font-size: 2vw;
+  }
+  
+  .dialogue-options {
+    bottom: 5vh;
+    left: 25vw;
+    font-size: 2vw;
+    gap: 1vh;
+  }
+  
+  .dialogue-footer {
+    bottom: 1vh;
+    right: 12vw;
+    font-size: 1.5vw;
+  }
 }
 
 .background-animation {
@@ -57,7 +182,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image covers the container */
+  object-fit: cover;
   z-index: 1;
 }
 
